@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Maqolalar</title>
+</head>
+<body>
+<br>
+<h1>Maqolalar</h1>
+<hr>
+<br>
+<ol>
+    {% for i in maqolalar %}
+   <h2> <li><a href="/maqola/{{i.id}}/">{{i.muallif.ism}}ning maqolasi</a></li> </h2>
+    {% endfor %}
+
+    <br>
+    <br>
+    <form method="post">{% csrf_token %}
+        <br>
+        <br>
+        {{ form }}
+
+        <button>Qo'shish</button>
+    </form>
+     <br>
+    <br>
+
+</body>
+</html>
