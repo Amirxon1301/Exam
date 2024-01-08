@@ -53,3 +53,5 @@ class Bitta_mView(View):
         return render(request, 'maqola.html', data)
 
 
+
+
